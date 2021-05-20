@@ -473,7 +473,7 @@ input[type="radio"]:checked + .custom_radio:after{
 
     .header{
 	background-image:url("images/image-hero-desktop.jpg");
-	height:450px;
+	height:400px;
     }
     
     .nav-bar{
@@ -506,13 +506,13 @@ input[type="radio"]:checked + .custom_radio:after{
 	flex-direction:column;
 	justify-content:center;
 	align-items:center;
-	margin-top:370px;
+	margin-top:320px;
 	width:100%;
     }
 
     .project,.info,.about,.selection-modal,.sub-about{
 	max-width:860px;
-	padding:50px;
+	padding:30px 50px;
     }
 
     .project h1{
@@ -541,6 +541,11 @@ input[type="radio"]:checked + .custom_radio:after{
 	margin-bottom:20px;
     }
 
+    .sub-proj a{
+	padding-left:50px;
+	padding-right:50px;
+    }
+
     .sub-proj div img{
 	float:left;
     }
@@ -552,7 +557,6 @@ input[type="radio"]:checked + .custom_radio:after{
 
     /*buttons */
     .sub-proj a, .amount > a, .button a, .completed a{
-	padding:;
 	font-size:16px;
     }
     
