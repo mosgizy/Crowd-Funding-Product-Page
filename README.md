@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<<<< HEAD https://mosgizy.github.io/Crowd-Funding-Product-Page/
 # Crowd-Funding-Product-Page
 A project from frontend mentor
 =======
