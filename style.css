@@ -9,6 +9,7 @@
 body{
     font-family: 'Commissioner', sans-serif;
     font-size:16px;
+    background-color:#f2f2f2;
 }
 
 .container{
@@ -105,6 +106,7 @@ table td a{
     position:absolute;
     z-index:2;
     margin-top:285px;
+
 }
 
 /*Projects start here */
@@ -477,7 +479,7 @@ input[type="radio"]:checked + .custom_radio:after{
     }
     
     .nav-bar{
-	max-width:1400px;
+	max-width:1200px;
 	margin:auto;
 	margin-top:40px;
     }
@@ -511,7 +513,7 @@ input[type="radio"]:checked + .custom_radio:after{
     }
 
     .project,.info,.about,.selection-modal,.sub-about{
-	max-width:860px;
+	max-width:800px;
 	padding:30px 50px;
     }
 
@@ -533,7 +535,7 @@ input[type="radio"]:checked + .custom_radio:after{
 	min-width:200px;
 	border-radius:45px;
 	background-color:#f4f4f4;
-	color:#747474;
+	color:hsl(0, 0%, 48%) ;
 	font-weight:bold;
     }
 

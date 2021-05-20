@@ -4,6 +4,9 @@ window.addEventListener('load',function(){
     const menu = document.querySelector(".nav-bar table");
     const header = document.querySelector(".header");
     const overlay = document.querySelectorAll(".overlay");
+    const bookMarkButton = document.querySelector(".sub-proj a");
+    const bookMarkPara = document.querySelector(".sub-proj div p");
+    const bookMarkImg = document.querySelector(".sub-proj div img");
     const about = document.querySelectorAll(".amount a");
     const selModal = document.querySelector(".selection-modal");
     const selModalClose = document.querySelector(".selection-modal span img");
@@ -32,6 +35,17 @@ window.addEventListener('load',function(){
 	    header.style.zIndex = 1;
 	    overlay[0].style.display = "none";
         }
+    });
+
+    bookMarkButton.addEventListener('click',() => {
+	if( bookMarkPara.textContent === "Bookmark"){
+	    bookMarkPara.style.color= "hsl(176, 72%, 28%)";
+	    bookMarkPara.textContent = "BookMarked";
+	    bookMarkImg.style.Color = "hsl(176, 72%, 28%)";
+	}else{
+	    bookMarkPara.style.color= "hsl(0, 0%, 48%) ";
+	    bookMarkPara.textContent = "Bookmark";
+	    }
     });
 
     //About buttons
