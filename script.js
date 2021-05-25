@@ -24,17 +24,15 @@ window.addEventListener('load',function(){
 
     //Menu icon
     hamburg[1].addEventListener('click',function(){
-        if(hamburg[1].src.search(hamb) !== -1){
-            hamburg[1].src = close;
-	    menu.style.display = "block";
+	menu.classList.toggle("show");
+	overlay[0].classList.toggle("show");
+	if(menu.classList.contains("show")){
 	    header.style.zIndex = 120;
-	    overlay[0].style.display = "block";
-        }else{
-            hamburg[1].src = hamb;
-	    menu.style.display = "none";
+	    hamburg[1].src = close;
+	}else{
 	    header.style.zIndex = 1;
-	    overlay[0].style.display = "none";
-        }
+	    hamburg[1].src = hamb;
+	}
     });
 
     bookMarkButton.addEventListener('click',() => {
@@ -52,7 +50,7 @@ window.addEventListener('load',function(){
 
     about.forEach((value) => {
 	value.addEventListener('click',() => {
-	    if(selModal.style.display === "block"){
+/*	    if(selModal.style.display === "block"){
 		selModal.style.display = "none";
 		overlay[1].style.display = "none";
 	    }else{
@@ -61,6 +59,14 @@ window.addEventListener('load',function(){
 		overlay[1].style.justifyContent = "center";
 		selModal.style.zIndex =100;
 
+		}*/
+
+	    selModal.classList.toggle('show');
+	    overlay[1].classList.toggle('show');
+	    if(selModal.classList.contains("show")){
+		selModal.style.zIndex =100;
+	    }else{
+	
 	    }
 	});
     });
@@ -68,8 +74,12 @@ window.addEventListener('load',function(){
     //close icon on the selection-modal
 
     selModalClose.addEventListener('click',() => {
-	selModal.style.display = "none";
-	overlay[1].style.display = "none";
+/*	selModal.style.display = "none";
+	overlay[1].style.display = "none";*/
+	
+	selModal.classList.remove('show');
+	overlay[1].classList.remove('show');
+	
     });
 
    //radio button on the selection-modal and the border-color showing the sub-pledge option
@@ -95,10 +105,9 @@ window.addEventListener('load',function(){
     let continueBut = () => {
 	continueButton.forEach((val) => {
 	    val.addEventListener('click',() => {
-		completed.style.display = "block";
-		selModal.style.display = "none";
-		overlay[2].style.display = "flex";
-		overlay[2].style.justifyContent = "center";
+		completed.classList.add("show");
+		selModal.classList.remove('show');
+		overlay[2].classList.add('show');
 
 		complete();
 	    });
@@ -109,18 +118,17 @@ window.addEventListener('load',function(){
 
     let complete = () => {
 	completeButton.addEventListener('click',() => {
-	    completed.style.display="none";
+	    completed.classList.remove("show");
 	    overlay.forEach((val) => {
-		val.style.display = "none";
+		val.classList.remove("show");
 	    });
 	});
     }
 
     checkFirst.addEventListener('click',() => {
-	completed.style.display = "block";
-	selModal.style.display = "none";
-	overlay[2].style.display = "flex";
-	overlay[2].style.justifyContent = "center";
+	completed.classList.add("show");
+	selModal.classList.remove('show');
+	overlay[2].classList.add('show');
 	
 	complete();
     });

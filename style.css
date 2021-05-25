@@ -51,6 +51,7 @@ body{
 .nav-bar-img button{
     background:none;
     border:none;
+    transition:all 0.3s linear;
 }
 
 .nav-bar-img button:hover{
@@ -60,8 +61,8 @@ body{
     display:none;
 }
 
-.nav-bar table{
-    display:none;
+.hide{
+    transform:translate(-120%);
     position:relative;
     background-color:white;
     padding:10px 0px;
@@ -70,6 +71,7 @@ body{
     box-shadow:0 0 2px 0 rgba(241, 242, 245,0.3), 0 0 6px 0 rgba(0, 0, 0, 0.16);
     border-radius:12px;
     transition:all 0.3s linear;
+    z-index:120;
 }
 
 .nav-bar table tr{
@@ -94,7 +96,8 @@ table td a{
 }
 
 .overlay{
-    display:none;
+    transform:translate(-120%);
+    transition:all 0.3s linear;
     position:fixed;
     top:0;
     left:0;
@@ -297,7 +300,8 @@ progress::-moz-progress-bar {
 /*selection modal start here */
 
 .selection-modal, .completed{
-    display:none;
+    transform:translate(-120%);
+    transition:all 0.3s linear;
     position:absolute;
     z-index:7;
     margin:auto;
@@ -305,6 +309,7 @@ progress::-moz-progress-bar {
     padding:30px;
     top:70px;
     height:auto;
+    left:8%;
 }
 
 .selection-modal > span{
@@ -352,6 +357,7 @@ progress::-moz-progress-bar {
 
 .sub-pledge{
     display:none;
+    transition:all 0.3s linear;
     margin-top:10px;
     text-align:center;
 }
@@ -446,11 +452,13 @@ input[type="radio"]:checked + .custom_radio:after{
 
 /*completed start here */
 .completed{
-    display:none;
+    transform:translate(-120%);
+    transition:all 0.3s linear;
     padding:20px 25px;
     text-align:center;
     top:80px;
     padding-bottom:55px;
+    left:8%;
 }
 
 .completed img{
@@ -476,6 +484,10 @@ input[type="radio"]:checked + .custom_radio:after{
     padding:16px 40px;
 }
 
+
+.show{
+    transform:translate(0);
+}
 @media screen and (min-width:600px){
 
     .header{
