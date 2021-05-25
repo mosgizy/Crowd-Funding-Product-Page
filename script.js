@@ -4,10 +4,10 @@ window.addEventListener('load',function(){
     const menu = document.querySelector(".nav-bar table");
     const header = document.querySelector(".header");
     const overlay = document.querySelectorAll(".overlay");
-    const bookMarkButton = document.querySelector(".sub-proj a");
+    const bookMarkButton = document.querySelector(".sub-proj button");
     const bookMarkPara = document.querySelector(".sub-proj div p");
     const bookMarkImg = document.querySelector(".sub-proj div img");
-    const about = document.querySelectorAll(".amount a");
+    const about = document.querySelectorAll(".amount button");
     const selModal = document.querySelector(".selection-modal");
     const selModalClose = document.querySelector(".selection-modal span img");
     const pledge = document.querySelectorAll(".pledge");
@@ -16,7 +16,7 @@ window.addEventListener('load',function(){
     const label = document.querySelectorAll(".sub-pledge1 label");
     const continueButton = document.querySelectorAll(".sub-pledge .next");
     const completed = document.querySelector(".completed");
-    const completeButton = document.querySelector(".completed a");
+    const completeButton = document.querySelector(".completed button");
     const checkFirst = document.querySelector("label .check-first");
 
     let hamb = "images/icon-hamburger.svg";
