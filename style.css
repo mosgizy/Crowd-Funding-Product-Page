@@ -505,6 +505,10 @@ input[type="radio"]:checked + .custom_radio:after{
 	display:none;
     }
 
+    .hide{
+	transform:translate(-500%);
+    }
+
     .nav-bar-img ul{
 	display:flex;
 	list-style-type:none;
