@@ -101,15 +101,19 @@ window.addEventListener('load',function(){
     });
 
     //continue Button
-
+    let hold = () => {
+	completed.classList.add("show");
+	selModal.classList.remove('show');
+	overlay[2].classList.add('show');
+	overlay[1].classList.remove('show');
+	
+	complete();
+    }
+    
     let continueBut = () => {
 	continueButton.forEach((val) => {
 	    val.addEventListener('click',() => {
-		completed.classList.add("show");
-		selModal.classList.remove('show');
-		overlay[2].classList.add('show');
-
-		complete();
+		hold();
 	    });
 	});
     }
@@ -120,17 +124,15 @@ window.addEventListener('load',function(){
 	completeButton.addEventListener('click',() => {
 	    completed.classList.remove("show");
 	    overlay.forEach((val) => {
+		console.log(val.classList.contains('show'));
 		val.classList.remove("show");
+		console.log(val.classList.contains('show'));
 	    });
 	});
     }
 
     checkFirst.addEventListener('click',() => {
-	completed.classList.add("show");
-	selModal.classList.remove('show');
-	overlay[2].classList.add('show');
-	
-	complete();
+	hold();
     });
     
 });
