@@ -124,9 +124,7 @@ window.addEventListener('load',function(){
 	completeButton.addEventListener('click',() => {
 	    completed.classList.remove("show");
 	    overlay.forEach((val) => {
-		console.log(val.classList.contains('show'));
 		val.classList.remove("show");
-		console.log(val.classList.contains('show'));
 	    });
 	});
     }
