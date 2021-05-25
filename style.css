@@ -109,6 +109,8 @@ table td a{
     cursor:pointer;
     padding:90px 0px;
     overflow:scroll;
+    display:flex;
+    justify-content:center;
     z-index:4;;
 }
 
@@ -309,7 +311,6 @@ progress::-moz-progress-bar {
     padding:30px;
     top:70px;
     height:auto;
-    left:8%;
 }
 
 .selection-modal > span{
@@ -458,7 +459,6 @@ input[type="radio"]:checked + .custom_radio:after{
     text-align:center;
     top:80px;
     padding-bottom:55px;
-    left:8%;
 }
 
 .completed img{
@@ -531,6 +531,11 @@ input[type="radio"]:checked + .custom_radio:after{
 	align-items:center;
 	margin-top:320px;
 	width:100%;
+    }
+
+    .overlay{
+	display:flex;
+	justify-content:center;
     }
 
     .project,.info,.about,.selection-modal,.sub-about{
