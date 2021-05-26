@@ -344,6 +344,14 @@ progress::-moz-progress-bar {
     border-radius:10px;
 }
 
+.show-pledge{
+    border:2px solid hsl(176,50%,47%);
+}
+
+.show-pledge .sub-pledge{
+    display:block;
+}
+
 .sub-pledge hr{
     width:100%;
     margin:auto;

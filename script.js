@@ -10,10 +10,10 @@ window.addEventListener('load',function(){
     const about = document.querySelectorAll(".amount button");
     const selModal = document.querySelector(".selection-modal");
     const selModalClose = document.querySelector(".selection-modal span img");
-    const pledge = document.querySelectorAll(".pledge");
-    const radioButton = document.querySelectorAll(".sub-pledge1 label input");
-    const subPledge = document.querySelectorAll(".sub-pledge");
-    const label = document.querySelectorAll(".sub-pledge1 label");
+    const pledges = document.querySelectorAll(".sub-pledge1");
+//  const radioButton = document.querySelectorAll(".sub-pledge1 label input");
+//  const subPledge = document.querySelectorAll(".sub-pledge");
+//  const label = document.querySelectorAll(".sub-pledge1 label");
     const continueButton = document.querySelectorAll(".sub-pledge .next");
     const completed = document.querySelector(".completed");
     const completeButton = document.querySelector(".completed button");
@@ -81,9 +81,30 @@ window.addEventListener('load',function(){
 	overlay[1].classList.remove('show');
 	
     });
+    
+    //new radio button function using the display in CSS instead of doing all the work with JS
+    pledges.forEach((pledge) => {
+	const radioBtn = pledge.querySelector(".check");
+	radioBtn.addEventListener('click',() => {
+
+	    pledges.forEach((item) => {
+		item.parentElement.classList.remove("show-pledge");
+	    });
+	    
+	    if(radioBtn.checked === true){
+		pledge.parentElement.classList.add("show-pledge");
+		continueBut();
+	    }
+	});
+    });
 
    //radio button on the selection-modal and the border-color showing the sub-pledge option
-    label.forEach((val,index) => {
+/*    label.forEach((val,index) => {
+	label.forEach(() => {
+	    if(radioButton[index].checked === true){
+		pledge[index].style.border = "2px solid hsl(176, 50%, 47%)";
+	    }
+	});
         val.addEventListener('click',() => {
             if(radioButton[index].checked === true){
                 pledge[index].style.border = "2px solid hsl(176, 50%, 47%)";
@@ -98,7 +119,9 @@ window.addEventListener('load',function(){
                 });
             }
         });
-    });
+	});*/
+
+    
 
     //continue Button
     let hold = () => {
@@ -114,6 +137,9 @@ window.addEventListener('load',function(){
 	continueButton.forEach((val) => {
 	    val.addEventListener('click',() => {
 		hold();
+		pledges.forEach((item) => { //remove the show-pledge of the current radio button clicked
+		    item.parentElement.classList.remove("show-pledge");
+		});
 	    });
 	});
     }
